@@ -1,0 +1,86 @@
+digraph {
+	5 -> 6 [label=IS_AST_PARENT color=black]
+	6 -> 7 [label=IS_AST_PARENT color=black]
+	6 -> 8 [label=IS_AST_PARENT color=black]
+	6 -> 9 [label=IS_AST_PARENT color=black]
+	9 -> 10 [label=IS_AST_PARENT color=black]
+	9 -> 11 [label=IS_AST_PARENT color=black]
+	13 -> 14 [label=IS_AST_PARENT color=black]
+	14 -> 15 [label=IS_AST_PARENT color=black]
+	14 -> 16 [label=IS_AST_PARENT color=black]
+	18 -> 19 [label=IS_AST_PARENT color=black]
+	19 -> 20 [label=IS_AST_PARENT color=black]
+	19 -> 21 [label=IS_AST_PARENT color=black]
+	22 -> 23 [label=IS_AST_PARENT color=black]
+	27 -> 5 [label=FLOWS_TO color=blue]
+	5 -> 13 [label=FLOWS_TO color=blue]
+	13 -> 18 [label=FLOWS_TO color=blue]
+	13 -> 22 [label=FLOWS_TO color=blue]
+	18 -> 13 [label=FLOWS_TO color=blue]
+	22 -> 28 [label=FLOWS_TO color=blue]
+	7 -> 8 [label=NSC color=red]
+	8 -> 10 [label=NSC color=red]
+	10 -> 11 [label=NSC color=red]
+	11 -> 15 [label=NSC color=red]
+	15 -> 16 [label=NSC color=red]
+	16 -> 20 [label=NSC color=red]
+	20 -> 21 [label=NSC color=red]
+	21 -> 23 [label=NSC color=red]
+	10 [label="10
+i
+Identifier"]
+	13 [label="13
+i < 2
+Condition"]
+	5 [label="5
+int i = 0 ;
+IdentifierDeclStatement"]
+	7 [label="7
+int
+IdentifierDeclType"]
+	23 [label="23
+i
+Identifier"]
+	20 [label="20
+i
+Identifier"]
+	21 [label="21
+++
+IncDec"]
+	9 [label="9
+i = 0
+AssignmentExpression"]
+	16 [label="16
+2
+PrimaryExpression"]
+	18 [label="18
+i ++
+ExpressionStatement"]
+	22 [label="22
+return i ;
+ReturnStatement"]
+	6 [label="6
+i = 0
+IdentifierDecl"]
+	8 [label="8
+i
+Identifier"]
+	28 [label="28
+EXIT
+CFGExitNode"]
+	14 [label="14
+i < 2
+RelationalExpression"]
+	11 [label="11
+0
+PrimaryExpression"]
+	15 [label="15
+i
+Identifier"]
+	19 [label="19
+i ++
+PostIncDecOperationExpression"]
+	27 [label="27
+ENTRY
+CFGEntryNode"]
+}
